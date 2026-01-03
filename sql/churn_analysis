@@ -1,0 +1,6 @@
+-- Understanding how many customers are leaving
+
+SELECT 
+    COUNT(*) AS total_customers,
+    COUNT(CASE WHEN churn = 'Yes' THEN 1 END) AS churned_customers
+FROM customers;
